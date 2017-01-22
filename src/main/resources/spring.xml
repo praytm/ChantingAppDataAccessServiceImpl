@@ -34,11 +34,12 @@
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="annotatedClasses">
+		<property name="packagesToScan" value="org.iskcon.nvcc.chantingApp.dao" />
+		<!-- <property name="annotatedClasses">
 			<list>
 				<value>com.journaldev.model.Person</value>
 			</list>
-		</property>
+		</property> -->
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>

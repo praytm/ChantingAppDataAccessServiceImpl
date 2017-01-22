@@ -35,14 +35,14 @@ public class User implements Serializable {
 	/**
 	 * 
 	 */
-	@Column(name = "UserId")
+	@Column(name = "Name")
 	private String name;
 
 	@Column(name = "Email")
 	private String email;
 
 	@Column(name = "Mobile")
-	private Integer mobile;
+	private String mobile;
 
 	@Column(name = "CreationDate")
 	private Date creationDate;
@@ -52,6 +52,9 @@ public class User implements Serializable {
 
 	@Column(name = "UserStatus")
 	private String userStatus;
+	
+	@Column(name = "Password")
+	private String password;
 
 	@OneToMany(mappedBy = "user")
 	private Set<ChantingSessionHistory> chantingSessionHistories;
@@ -76,11 +79,11 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
-	public Integer getMobile() {
+	public String getMobile() {
 		return this.mobile;
 	}
 
-	public void setMobile(Integer mobile) {
+	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
 
@@ -108,6 +111,20 @@ public class User implements Serializable {
 		this.userStatus = userStatus;
 	}
 
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * @param password the password to set
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public Set<ChantingSessionHistory> getChantingSessionHistories() {
 		return this.chantingSessionHistories;
 	}
@@ -117,4 +134,18 @@ public class User implements Serializable {
 		this.chantingSessionHistories = chantingSessionHistories;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", name=" + name + ", email=" + email
+				+ ", mobile=" + mobile + ", creationDate=" + creationDate
+				+ ", lastLoginDate=" + lastLoginDate + ", userStatus="
+				+ userStatus + ", password=" + password
+				+ ", chantingSessionHistories=" + chantingSessionHistories
+				+ "]";
+	}
+
+	
 }

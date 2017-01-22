@@ -3,8 +3,12 @@
  */
 package org.iskcon.nvcc.chantingApp.dao.impl;
 
+import java.util.List;
+
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.iskcon.nvcc.chantingApp.dao.RegistrationDAO;
 import org.iskcon.nvcc.chantingApp.dao.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +23,18 @@ public class RegistrationDAOImpl implements RegistrationDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-	
-	
-	public User registerUser(User userInput){
+
+	public User registerUser(User userInput) {
+		System.out.println("userInput is ::::::::"+userInput);
 		Session session = this.sessionFactory.getCurrentSession();
-		Object obj =session.save(userInput);
-		Integer savedUserId = (Integer) obj;
-		
-		return (User) session.get(User.class, savedUserId);
+		List<Criteria> list = session.createCriteria(User.class)
+				.add(Restrictions.eq("email", userInput.getEmail())).list();
+		if (list.isEmpty()) {
+			session.save(userInput);
+			return userInput;
+		} else {
+			return null;
+		}
+
 	}
 }
