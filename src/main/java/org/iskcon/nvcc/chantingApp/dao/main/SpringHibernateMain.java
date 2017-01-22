@@ -1,11 +1,10 @@
-package com.journaldev.main;
+package org.iskcon.nvcc.chantingApp.dao.main;
 
 import java.util.List;
 
+import org.iskcon.nvcc.chantingApp.dao.Person;
+import org.iskcon.nvcc.chantingApp.dao.PersonDAO;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.journaldev.dao.PersonDAO;
-import com.journaldev.model.Person;
 
 public class SpringHibernateMain {
 

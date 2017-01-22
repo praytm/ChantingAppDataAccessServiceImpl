@@ -1,13 +1,13 @@
-package com.journaldev.dao;
+package org.iskcon.nvcc.chantingApp.dao.impl;
 
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.iskcon.nvcc.chantingApp.dao.Person;
+import org.iskcon.nvcc.chantingApp.dao.PersonDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import com.journaldev.model.Person;
 
 @Repository
 public class PersonDAOImpl implements PersonDAO {

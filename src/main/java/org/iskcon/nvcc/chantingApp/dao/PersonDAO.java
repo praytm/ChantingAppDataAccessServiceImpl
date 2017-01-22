@@ -1,8 +1,8 @@
-package com.journaldev.dao;
+package org.iskcon.nvcc.chantingApp.dao;
 
 import java.util.List;
 
-import com.journaldev.model.Person;
+
 
 public interface PersonDAO {
 
