@@ -17,8 +17,7 @@ CREATE TABLE `user` (
   `UserStatus` varchar(45) NOT NULL,
   `Password` varchar(45) NOT NULL,
   PRIMARY KEY (`UserId`),
-  UNIQUE KEY `EMAIL_UNIQUE` (`Email`),
-  UNIQUE KEY `MOBILE_UNIQUE` (`Mobile`)
+  UNIQUE KEY `EMAIL_UNIQUE` (`Email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `chantingsessionhistory` (
