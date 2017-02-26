@@ -49,8 +49,8 @@
 		</property>
 	</bean>
 	
-<!-- 	<bean id="personDAO" class="com.journaldev.dao.PersonDAOImpl">
-		<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" /> 
-	</bean> -->
+ 	<!-- <bean id="userStatisticsDAO" class="org.iskcon.nvcc.chantingApp.dao.impl.UserStatisticsDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory" /> 
+	</bean>  -->
 	
 </beans>

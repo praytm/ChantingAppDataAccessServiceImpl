@@ -20,8 +20,9 @@ CREATE TABLE `user` (
   UNIQUE KEY `EMAIL_UNIQUE` (`Email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
+
 CREATE TABLE `chantingsessionhistory` (
-  `ChantingSessionHistoryId` int(11) NOT NULL,
+  `ChantingSessionHistoryId` int(11) NOT NULL AUTO_INCREMENT,
   `ChantingSessionStartTime` datetime NOT NULL,
   `ChantingSessionEndTime` datetime DEFAULT NULL,
   `ChantingSessionDate` date NOT NULL,
@@ -30,5 +31,4 @@ CREATE TABLE `chantingsessionhistory` (
   PRIMARY KEY (`ChantingSessionHistoryId`),
   KEY `UserId_idx` (`UserId`),
   CONSTRAINT `CHANTINGSESSIONHISTORY_USER_FK` FOREIGN KEY (`UserId`) REFERENCES `user` (`UserId`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
