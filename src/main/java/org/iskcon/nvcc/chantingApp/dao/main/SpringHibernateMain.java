@@ -12,7 +12,7 @@ public class SpringHibernateMain {
 		
 		UserStatisticsDAOImpl userStatisticsDAO = context.getBean(UserStatisticsDAOImpl.class);
 		User user = userStatisticsDAO.loadUser(1);
-		 Integer count = userStatisticsDAO.getTodaysNumberOfBeadsForUser(user);
+		 Integer count = userStatisticsDAO.getTodaysNumberOfBeadsForUser(user, null);
 		System.out.println("count is  "+count);
 		context.close();
 		
