@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * Chantingsessionhistory 
  */
 @Entity
-@Table(schema = "test", name = "chantingsessionhistory")
+@Table(schema = "JaiNrisimha", name = "chantingsessionhistory")
 public class ChantingSessionHistory implements Serializable {
 
 	/**

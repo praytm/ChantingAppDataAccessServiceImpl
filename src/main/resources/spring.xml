@@ -9,9 +9,9 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/test" />
-		<property name="username" value="restuser" />
-		<property name="password" value="restuser" />
+		<property name="url" value="jdbc:mysql://localhost:3306/JaiNrisimha" />
+		<property name="username" value="ShriNrisimhaDevBhagvan" />
+		<property name="password" value="NarVri09%$Pu41ut#JstRW" />
 	</bean>
 
 <!-- Hibernate 3 XML SessionFactory Bean definition-->
@@ -44,7 +44,7 @@
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 				<!-- <prop key="hibernate.current_session_context_class">thread</prop> -->
-				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.show_sql">false</prop>
 			</props>
 		</property>
 	</bean>
