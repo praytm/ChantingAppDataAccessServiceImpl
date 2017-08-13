@@ -42,6 +42,16 @@ public class LoginDAOImpl implements LoginDAO {
 			return userInput;
 		} else {
 			User user = (User) listUsers.get(0);
+			if(user.getIsRegisteredViaGoogle()){				
+				if(userInput.getGoogleAuthToken().equals(user.getGoogleAuthToken())){
+					//if matching record is found and the user is registered via Google and the GoogleAuthToken matches from db
+					return user;
+				}else{
+					// if the GoogleAuthToken did not match
+					return null;
+				}
+			}else
+				// if user is not registered via google then simply verify the password
 			if (userInput.getPassword().equals(user.getPassword())) {
 				//if matching record is found and also the password matched, then return the user object from db
 				logger.info("password provided for user {} did match in db ",userInput.getEmail());

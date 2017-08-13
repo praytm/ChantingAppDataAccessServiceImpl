@@ -55,6 +55,12 @@ public class User implements Serializable {
 	
 	@Column(name = "Password")
 	private String password;
+	
+	@Column(name = "GoogleAuthToken")
+	private String googleAuthToken;
+	
+	@Column(name = "RegisteredViaGoogle")
+	private Boolean isRegisteredViaGoogle;
 
 	@OneToMany(mappedBy = "user")
 	private Set<ChantingSessionHistory> chantingSessionHistories;
@@ -132,6 +138,34 @@ public class User implements Serializable {
 	public void setChantingSessionHistories(
 			Set<ChantingSessionHistory> chantingSessionHistories) {
 		this.chantingSessionHistories = chantingSessionHistories;
+	}
+
+	/**
+	 * @return the googleAuthToken
+	 */
+	public String getGoogleAuthToken() {
+		return googleAuthToken;
+	}
+
+	/**
+	 * @param googleAuthToken the googleAuthToken to set
+	 */
+	public void setGoogleAuthToken(String googleAuthToken) {
+		this.googleAuthToken = googleAuthToken;
+	}
+
+	/**
+	 * @return the isRegisteredViaGoogle
+	 */
+	public Boolean getIsRegisteredViaGoogle() {
+		return isRegisteredViaGoogle;
+	}
+
+	/**
+	 * @param isRegisteredViaGoogle the isRegisteredViaGoogle to set
+	 */
+	public void setIsRegisteredViaGoogle(Boolean isRegisteredViaGoogle) {
+		this.isRegisteredViaGoogle = isRegisteredViaGoogle;
 	}
 
 	/* (non-Javadoc)

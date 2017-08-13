@@ -16,9 +16,11 @@ CREATE TABLE `user` (
   `LastLoginDate` datetime DEFAULT NULL,
   `UserStatus` varchar(45) NOT NULL,
   `Password` varchar(45) NOT NULL,
+  `GoogleAuthToken` varchar(100) DEFAULT NULL,
+  `RegisteredViaGoogle` bit(1) NOT NULL,
   PRIMARY KEY (`UserId`),
   UNIQUE KEY `EMAIL_UNIQUE` (`Email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE `chantingsessionhistory` (
