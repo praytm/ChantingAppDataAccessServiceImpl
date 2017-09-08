@@ -49,8 +49,8 @@
 		</property>
 	</bean>
 	
- 	<!-- <bean id="userStatisticsDAO" class="org.iskcon.nvcc.chantingApp.dao.impl.UserStatisticsDAOImpl">
+<!--  	 <bean id="userStatisticsDAO" class="org.iskcon.nvcc.chantingApp.dao.impl.UserStatisticsDAOImpl">
 		<property name="sessionFactory" ref="sessionFactory" /> 
-	</bean>  -->
-	
+	</bean>  
+	 -->
 </beans>

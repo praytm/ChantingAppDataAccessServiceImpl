@@ -23,5 +23,7 @@ public interface UserStatisticsDAO {
 	public Map<String, Integer> getChantingHistoryForUser(User user,
 			Date dateInput);
 	
+	public Integer getTotalNumberOfBeadsForToday();
+	
 	
 }

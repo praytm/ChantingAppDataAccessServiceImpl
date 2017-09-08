@@ -11,8 +11,10 @@ public class SpringHibernateMain {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 		
 		UserStatisticsDAOImpl userStatisticsDAO = context.getBean(UserStatisticsDAOImpl.class);
-		User user = userStatisticsDAO.loadUser(1);
-		 Integer count = userStatisticsDAO.getTodaysNumberOfBeadsForUser(user, null);
+	//	User user = userStatisticsDAO.loadUser(1);
+		// Integer count = userStatisticsDAO.getTodaysNumberOfBeadsForUser(user, null);
+		 
+		 Integer count = userStatisticsDAO.getTotalNumberOfBeadsForToday();
 		System.out.println("count is  "+count);
 		context.close();
 		

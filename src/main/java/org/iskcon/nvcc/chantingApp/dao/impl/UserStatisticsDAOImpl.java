@@ -78,6 +78,18 @@ public class UserStatisticsDAOImpl implements UserStatisticsDAO {
 				.add(Restrictions.eq("user", user)).uniqueResult();
 		return val != null ? val.intValue() : 0;
 	}
+	
+	public Integer getTotalNumberOfBeadsForToday(){
+		Session session = this.sessionFactory.getCurrentSession();
+	//	Session session = this.sessionFactory.openSession();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		String dateArgument = sdf.format(new Date());
+		Long val = (Long) session.createCriteria(ChantingSessionHistory.class)
+				.setProjection(Projections.sum("numberOfBeads"))
+				.add(Restrictions.eq("chantingSessionDate", new Date(dateArgument))).uniqueResult();
+		
+		return val != null ? val.intValue() : 0;
+	}
 
 	public Integer getTodaysNumberOfBeadsForUser(User user, Date dateInput) {
 		
