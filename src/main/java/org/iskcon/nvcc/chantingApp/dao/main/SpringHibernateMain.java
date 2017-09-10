@@ -14,8 +14,8 @@ public class SpringHibernateMain {
 	//	User user = userStatisticsDAO.loadUser(1);
 		// Integer count = userStatisticsDAO.getTodaysNumberOfBeadsForUser(user, null);
 		 
-		 Integer count = userStatisticsDAO.getTotalNumberOfBeadsForToday();
-		System.out.println("count is  "+count);
+		 String value = userStatisticsDAO.getValueFromMasterData("DAILY_TARGET");
+		System.out.println("count is  "+value);
 		context.close();
 		
 	}

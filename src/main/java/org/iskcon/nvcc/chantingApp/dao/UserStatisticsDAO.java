@@ -25,5 +25,7 @@ public interface UserStatisticsDAO {
 	
 	public Integer getTotalNumberOfBeadsForToday();
 	
+	public String getValueFromMasterData(String key);
+	
 	
 }
