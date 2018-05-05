@@ -6,7 +6,7 @@ CREATE TABLE `Person` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 commit;
 
-CREATE TABLE `MasterData` (
+CREATE TABLE `masterdata` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(20) NOT NULL DEFAULT '',
   `value` varchar(100) DEFAULT NULL,
@@ -40,3 +40,5 @@ CREATE TABLE `chantingsessionhistory` (
   KEY `UserId_idx` (`UserId`),
   CONSTRAINT `CHANTINGSESSIONHISTORY_USER_FK` FOREIGN KEY (`UserId`) REFERENCES `user` (`UserId`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+ALTER TABLE user ADD imageURL varchar(1000);
