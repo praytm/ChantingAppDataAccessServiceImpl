@@ -1,3 +1,5 @@
+USE database JaiNrisimha;
+
 CREATE TABLE `Person` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL DEFAULT '',
@@ -42,3 +44,4 @@ CREATE TABLE `chantingsessionhistory` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 ALTER TABLE user ADD imageURL varchar(1000);
+ALTER TABLE user CHANGE COLUMN GoogleAuthToken GoogleAuthToken VARCHAR(1000);
