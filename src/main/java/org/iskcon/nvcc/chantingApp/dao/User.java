@@ -59,6 +59,9 @@ public class User implements Serializable {
 	@Column(name = "GoogleAuthToken")
 	private String googleAuthToken;
 	
+	@Column(name = "profilepic")
+	private String profilepic;
+	
 	@Column(name = "RegisteredViaGoogle")
 	private Boolean isRegisteredViaGoogle;
 
@@ -160,6 +163,16 @@ public class User implements Serializable {
 	public Boolean getIsRegisteredViaGoogle() {
 		return isRegisteredViaGoogle;
 	}
+	
+	
+
+	public String getProfilepic() {
+		return profilepic;
+	}
+
+	public void setProfilepic(String profilepic) {
+		this.profilepic = profilepic;
+	}
 
 	/**
 	 * @param isRegisteredViaGoogle the isRegisteredViaGoogle to set
@@ -178,6 +191,7 @@ public class User implements Serializable {
 				+ ", lastLoginDate=" + lastLoginDate + ", userStatus="
 				+ userStatus + ", password=" + password
 				+ ", chantingSessionHistories=" + chantingSessionHistories
+				+ ", profilepic=" + profilepic
 				+ "]";
 	}
 
