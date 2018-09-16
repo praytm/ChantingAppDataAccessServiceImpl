@@ -56,6 +56,12 @@ public class User implements Serializable {
 	@Column(name = "Password")
 	private String password;
 	
+	@Column(name = "City")
+	private String city;
+	
+	@Column(name = "Country")
+	private String country;
+	
 	@Column(name = "GoogleAuthToken")
 	private String googleAuthToken;
 	
@@ -129,6 +135,34 @@ public class User implements Serializable {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	/**
+	 * @return the city
+	 */
+	public String getCity() {
+		return city;
+	}
+
+	/**
+	 * @param city the city to set
+	 */
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	/**
+	 * @return the country
+	 */
+	public String getCountry() {
+		return country;
+	}
+
+	/**
+	 * @param country the country to set
+	 */
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	public Set<ChantingSessionHistory> getChantingSessionHistories() {
