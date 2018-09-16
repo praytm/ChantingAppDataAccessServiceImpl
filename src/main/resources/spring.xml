@@ -12,6 +12,7 @@
 		<property name="url" value="jdbc:mysql://localhost:3306/JaiNrisimha" />
 		<property name="username" value="ShriNrisimhaDevBhagvan" />
 		<property name="password" value="NarVri09%$Pu41ut#JstRW" />
+
 	</bean>
 
 <!-- Hibernate 3 XML SessionFactory Bean definition-->

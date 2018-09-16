@@ -15,7 +15,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.iskcon.nvcc.chantingApp.dao.ChantingSessionHistory;
-import org.iskcon.nvcc.chantingApp.dao.MasterData;
+import org.iskcon.nvcc.chantingApp.dao.Masterdata;
 import org.iskcon.nvcc.chantingApp.dao.User;
 import org.iskcon.nvcc.chantingApp.dao.UserStatisticsDAO;
 import org.iskcon.nvcc.chantingApp.dao.UserStatus;
@@ -96,7 +96,7 @@ public class UserStatisticsDAOImpl implements UserStatisticsDAO {
 		System.out.println("Key isssssssssssssssssssssssssssss "+key);
 		Session session = this.sessionFactory.getCurrentSession();
 	//	Session session = this.sessionFactory.openSession();
-		MasterData val = (MasterData) session.createCriteria(MasterData.class)
+		Masterdata val = (Masterdata) session.createCriteria(Masterdata.class)
 				.add(Restrictions.eq("key", key)).uniqueResult();		
 		return val.getValue();
 		
